@@ -1,0 +1,31 @@
+﻿<Window x:Name="startdlg_window" x:Class="DlgMenuDemo.StartDlg"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DlgMenuDemo"
+        mc:Ignorable="d"
+        Title="Pong: Hauptmenü" Height="380" Width="372" ResizeMode="CanMinimize">
+    <Canvas x:Name="cnvs">
+        <Label Content="Radius" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="35" Canvas.Top="176"/>
+        <TextBox x:Name="tb_radius" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Canvas.Left="136" Canvas.Top="179"/>
+        <Button x:Name="OK" Content="OK" Canvas.Left="15" Canvas.Top="298" Width="323" Click="OK_Click" IsDefault="True" Height="30"/>
+        <Label Content="(0 &lt; Radius &lt; 101)" Canvas.Left="230" Canvas.Top="175"/>
+        <Label Content="Paddle breite" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="15" Canvas.Top="204"/>
+        <TextBox x:Name="tb_paddle_width" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Canvas.Left="136" Canvas.Top="208"/>
+        <Label Content="(0 &lt; Radius &lt; 151)" Canvas.Left="230" Canvas.Top="204"/>
+        <Label Content="Paddle höhe" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="15" Canvas.Top="235"/>
+        <TextBox x:Name="tb_paddle_height" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Canvas.Left="136" Canvas.Top="239"/>
+        <Label Content="(0 &lt; Radius &lt; 166)" Canvas.Left="230" Canvas.Top="235"/>
+        <Label Content="Paddle speed" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="15" Canvas.Top="266"/>
+        <TextBox x:Name="tb_paddle_speed" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" Canvas.Left="136" Canvas.Top="270"/>
+        <Label Content="(0 &lt; Radius &lt; 201)" Canvas.Left="230" Canvas.Top="266"/>
+        <TextBlock Canvas.Left="10" TextWrapping="Wrap" Canvas.Top="10" Height="117" Width="337">
+            <Bold> Hinweis: </Bold> <LineBreak/>
+            <Bold> Die Voreinstellungen sind empfohlen! </Bold><LineBreak/>
+            Das ändern der empfohlenen einstellungen kann dazu führen das keine Punkte erziehlt werden können oder der ball sich zu schnell zum reagieren bewegt! <LineBreak/>
+            Um den Spielspaß zu erhöhen können diese Werte aber trotzdem auf eigene gefahr geändert werden!
+        </TextBlock>
+        <Button x:Name="bt_reset" Content="Zurücksetzen auf empfohlene Einstellungen" Canvas.Left="10" Canvas.Top="132" Width="337" Height="38" Click="bt_reset_Click"/>
+    </Canvas>
+</Window>

@@ -1,0 +1,35 @@
+﻿<Window x:Class="DlgMenuDemo.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DlgMenuDemo"
+        mc:Ignorable="d"
+        Title="Settings" Height="380" Width="383">
+    <Canvas>
+        <CheckBox x:Name="cb_reset" Content="Ball nach Punkt zurücksetzen" Canvas.Left="82" Canvas.Top="74" FontSize="12" Height="16" Width="179" RenderTransformOrigin="0.5,0.5" Checked="cb_reset_Checked" Unchecked="cb_reset_Unchecked">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="cb_secondPlayer" Content="Zweiten Spieler automatiesieren" Canvas.Left="87" Canvas.Top="104" FontSize="12" Height="16" Width="197" RenderTransformOrigin="0.5,0.5" Click="cb_secondPlayer_Click">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <CheckBox x:Name="cb_clock" Content="Analoguhr anzeigen" Canvas.Left="87" Canvas.Top="131" FontSize="12" Height="16" Width="197" RenderTransformOrigin="0.5,0.5" Click="cb_clock_Click">
+            <CheckBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1.5" ScaleY="1.5"/>
+                </TransformGroup>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+        <Button x:Name="bt_moreSettings" Content="Erweiterte Einstellungen" Width="344" Canvas.Left="10" Canvas.Top="10" Height="41" Click="bt_moreSettings_Click"/>
+        <Button x:Name="bt_ok" Content="OK" Width="75" Canvas.Top="296" Canvas.Left="40" IsDefault="True" Click="bt_ok_Click"/>
+        <Button x:Name="bt_cancel" Content="Cancel" Width="75" Canvas.Left="249" Canvas.Top="296" IsCancel="True" Click="bt_cancel_Click"/>
+    </Canvas>
+</Window>
